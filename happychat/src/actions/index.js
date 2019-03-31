@@ -1,11 +1,17 @@
 import * as types from '../constants/ActionTypes.js';
 
 let nextMessageId = 0;
-const nextUserId = 0;
+let nextUserId = 0;
 
 export const getUsersList = users => ({
     type: types.USERS_LIST,
     users
+});
+
+export const addUser = name => ({
+    type: types.ADD_USER,
+    id: nextUserId++,
+    name
 });
 
 export const newMessage = (message, sender) => ({
