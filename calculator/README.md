@@ -1,3 +1,5 @@
+![calculator img](https://github.com/syongxin/React-Playground/blob/master/calculator/calculator.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
