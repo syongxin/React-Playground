@@ -51,37 +51,84 @@ body {
 }
 
 .calculator {
-    height: 80vh;
+    height: 72vh;
     width: 35%;
     box-shadow: 0 2rem 4rem var(--shadow);
     background-color: var(--color-light-black);
 }
 
 .result-screen {
-    height: 19vh;
+    height: 16vh;
     font-size: 8rem;
     font-weight: 600;
-
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    text-align: right;
+    overflow-x: scroll;
+    white-space: nowrap;
 }
 
 .computation-screen {
     height: 6vh;
     font-size: 2.5rem;
-
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    overflow-x: scroll;
+    white-space: nowrap;
+    text-align: right;
 }
 
 .screen {
-    height: 25vh;
+    height: 22vh;
     width: 100%;
     padding: 0 2rem;
-    overflow: hidden;
     white-space: nowrap;
     color: var(--color-light-white);
+    background-color: var(--color-pink-transparent);
+}
+
+/*.computation-screen::-webkit-scrollbar {*/
+    /*width: 0.5rem;*/
+/*}*/
+
+/*.computation-screen::-webkit-scrollbar:horizontal {*/
+    /*height: 0.5rem;*/
+/*}*/
+
+/*.computation-screen::-webkit-scrollbar-track, ::-webkit-scrollbar:horizontal {*/
+     /*background-color: var(--color-black);*/
+ /*}*/
+
+/*.computation-screen::-webkit-scrollbar-thumb, ::-webkit-scrollbar:horizontal {*/
+     /*background-color: var(--accent-dk);*/
+ /*}*/
+
+.keypad__row {
+    height: 10vh;
+    /* (80vh calculator - 25vh screen) / 5 = 11vh row*/
+    width: 100%;
+    display: flex;
+    color: white;
+}
+
+.keypad {
+    height: 55vh;
+    width: 100%;
+}
+
+.btn {
+    width: 25%;
+    height: 100%;
+    font-size: 3rem;
+    font-family: inherit;
+    background-color: var(--color-white);
+    border: 1px solid transparent;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+}
+.btn:hover {
+    color: var(--color-light-white);
     background-color: var(--color-tomato);
+}
+.btn:active {
+    transform: scale(.95);
 }
